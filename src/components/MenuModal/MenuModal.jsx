@@ -1,5 +1,6 @@
 import React from 'react'
 import closeIcon from '../../assets/close-icon.svg'
+import './MenuModal.scss'
 
 const firstLinkList = [
     "Modelos", "Servicios y Accesorios", "Financiación", "Reviews y Comunidad"
@@ -25,25 +26,25 @@ const MenuModal = ({open, setOpen}) => {
         </button>      
 
         <ul className='MenuModal-menu-list'>
-          {firstLinkList?.map(l => {
-            return <li>{l}</li>
+          {firstLinkList?.map((link, i) => {
+            return <li key={i}>{link}</li>
           })}
         </ul>      
         <ul className='MenuModal-menu-list'>
-          {secondLinkList?.map(l => {
-            return <li>{l}</li>
+          {secondLinkList?.map((link, i) => {
+            return <li key={i}>{link}</li>
           })}
         </ul>   
         <ul className='MenuModal-menu-list'>
-          {thirdLinkList?.map(l => {
-            return <li>{l}</li>
+          {thirdLinkList?.map((link, i) => {
+            return <li key={i}>{link}</li>
           })}
         </ul>                 
       </div>
 
       <ul className='MenuModal-menu-list_alt'>
-        {fourthLinkList?.map(l => {
-          return <li>{l}</li>
+        {fourthLinkList?.map((link, i) => {
+          return <li key={i}>{link}</li>
         })}
       </ul>       
     </div>

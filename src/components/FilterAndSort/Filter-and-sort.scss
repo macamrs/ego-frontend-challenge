@@ -33,6 +33,10 @@
             line-height: 0.875rem;
             letter-spacing: 0.005rem;
             padding: 0.5rem 1.125rem;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         &-inactive_button {
@@ -43,11 +47,19 @@
             line-height: 0.875rem;
             letter-spacing: 0.005rem;
             padding: 0.5rem 1.125rem;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
     &-sort_section {
         position: relative;
+
+        &:hover {
+            cursor: pointer;
+        }
         
         &-dropdown_btn {
             display: flex;

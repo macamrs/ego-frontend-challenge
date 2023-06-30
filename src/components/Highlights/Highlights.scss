@@ -1,0 +1,99 @@
+.Highlights {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    padding: 3.75rem 1rem 0 1rem;
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+
+        &:nth-child(2n+1) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &-image {
+        border-radius: 0.4rem;
+        width: 100%;
+    }
+
+    &-text_container {
+        padding: 0 7rem;
+
+        &-title {
+            color: #373737;
+            font-weight: 600;
+            line-height: 1.75rem;
+            font-size: 1.25rem;
+            padding-bottom: 0.875rem;
+        }
+
+        &-description {
+            color: #373737;
+            font-weight: 400;
+            letter-spacing: -0.1px;
+            font-size: 1rem;
+            line-height: 1.75rem;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .Highlights {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .Highlights {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .Highlights {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) {
+    .Highlights {
+        max-width: 1280px;
+    }
+}
+@media (min-width: 1536px) {
+    .Highlights {
+        max-width: 1536px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .Highlights-wrapper {
+        flex-direction: column;
+        padding: 1rem;
+
+        &:nth-child(2n+1) {
+            flex-direction: column;
+        }
+    }
+
+    .Highlights-text_container {
+        padding: 1.5rem 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .ResponsiveHighlights {
+        display: flex;
+        height: fit-content;
+        width: 100%;
+        gap: 3.5rem;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        position: relative;
+        justify-content: space-between;
+        padding: 0 0.5rem 1rem 1.5rem;
+    }
+}

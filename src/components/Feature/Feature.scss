@@ -1,0 +1,38 @@
+.Feature {
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.125rem;
+        width: 17rem;
+        height: 100%;
+
+        &-image {
+            height: 9rem;
+            object-fit: cover;
+            border-radius: 0.4rem;
+        }
+
+        &-name {
+            color: #373737;
+            font-weight: 600;
+            line-height: 1.75rem;
+            font-size: 1.25rem;
+            letter-spacing: -0.4px;
+        }
+
+        &-description {
+            color: #373737;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: -0.1px;
+            line-height: 1.75rem;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .Feature-wrapper-name {
+        text-wrap: wrap;
+    }
+}

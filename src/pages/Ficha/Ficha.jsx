@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { fetchCarAPIdata } from '../../utils/fetchAPIdata';
 import { BounceLoader } from 'react-spinners'
 import './Ficha.scss'
+import Highlights from '../../components/Highlights/Highlights';
+import Feature from '../../components/Feature/Feature';
 
 const Ficha = () => {
     const { id } = useParams();
@@ -37,36 +39,37 @@ const Ficha = () => {
 
             <div className='Feature'>
                 {car?.model_features?.map((feature, i) => {
-                    return (
-                    <div key={i} className='Feature-wrapper'>
-                        <img
-                            src={feature.image}
-                            alt={`Representacion de ${feature.name}`}
-                            className='Feature-wrapper-image'
-                        />
-                        <h4 className='Feature-wrapper-name'>{feature.name}</h4>
-                        <p className='Feature-wrapper-description'>{feature.description}</p>
-                    </div>
-                    );
+                    return <Feature 
+                        key={i}
+                        image={feature.image}
+                        name={feature.name}
+                        description={feature.description}
+                    />;
                 })}    
             </div>
-
+            
+            <div className='ResponsiveFeature'>
+                {car?.model_features?.map((feature, i) => {
+                    return (
+                        <Feature 
+                            key={i}
+                            image={feature.image}
+                            name={feature.name}
+                            description={feature.description}
+                        />
+                    );
+                })}                
+            </div>
 
             <div className='Highlights'>
                 {car?.model_highlights?.map((highlight, i) => {
                     return (
-                    <div key={i} className='Highlights-wrapper'>
-                        <img
-                            src={highlight.image}
-                            alt={`Representacion de ${highlight.title}`}
-                            className='Highlights-image'
+                        <Highlights 
+                            key={i}
+                            image={highlight.image} 
+                            title={highlight.title} 
+                            content={highlight.content}
                         />
-
-                        <div className='Highlights-text_container'>
-                            <h4 className='Highlights-text_container-title'>{highlight.title}</h4>
-                            <p className='Highlights-text_container-description' dangerouslySetInnerHTML={{ __html: highlight.content }}></p>                        
-                        </div>
-                    </div>
                     );
                 })}                
             </div>
