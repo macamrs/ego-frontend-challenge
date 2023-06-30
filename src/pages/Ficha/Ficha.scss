@@ -127,6 +127,13 @@
     }
 }
 
+.Loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
 @media (min-width: 640px) {
     .Ficha-header,
     .Highlights {
