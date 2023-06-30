@@ -33,6 +33,6 @@
 
 @media screen and (max-width: 640px) {
     .Feature-wrapper-name {
-        text-wrap: wrap;
+        white-space: pre-wrap;
     }
 }
