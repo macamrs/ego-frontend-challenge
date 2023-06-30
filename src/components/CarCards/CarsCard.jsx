@@ -1,10 +1,18 @@
 import React from 'react'
 import './CarCard.scss'
 import CustomButton from '../CustomButton/CustomButton'
+import { motion } from 'framer-motion'
 
 const CarsCard = ({ id, name, year, price, thumbnail}) => {
   return (
-    <div key={id} className='Wrapper'>
+    <motion.div 
+      className='Wrapper'
+      layout
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.25}}
+    >
         <h2>{name}</h2>
         <span>
             {year} | ${price}
@@ -15,7 +23,7 @@ const CarsCard = ({ id, name, year, price, thumbnail}) => {
             className='Wrapper-car_image'
         />
         <CustomButton id={id} />
-    </div>   
+    </motion.div>   
   )
 }
 
