@@ -1,0 +1,152 @@
+.Ficha {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0 7rem;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        padding-bottom: 5rem;
+
+        &-image {
+            flex: 1;
+        }
+
+        &-text_container {
+            flex: 1;
+
+            &-heading {
+                color: #373737;
+                font-weight: 600;
+                font-size: 1.25rem;
+                line-height: 1.6rem;
+                padding-bottom: 0.5rem;
+            }
+
+            &-title {
+                color: #373737;
+                font-weight: 600;
+                font-size: 3.125rem;
+                line-height: 3.5rem;
+                letter-spacing: -1px;
+                padding-bottom: 2.3rem;
+            }
+
+            &-description {
+                color: #373737;
+                font-size: 1rem;
+                font-weight: 400;
+                letter-spacing: -0.1px;
+                line-height: 1.6rem;
+            }
+        }
+    }
+}
+
+.Feature {
+    width: 100%;
+    background-color: #F7F7F7;
+    display: flex;
+    gap: 1.25rem;
+    justify-content: space-evenly;
+    padding: 2.75rem 0;
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.125rem;
+        width: 17rem;
+        height: 100%;
+
+        &-image {
+            height: 9rem;
+            object-fit: cover;
+            border-radius: 0.4rem;
+        }
+
+        &-name {
+            color: #373737;
+            font-weight: 600;
+            line-height: 1.75rem;
+            font-size: 1.25rem;
+            letter-spacing: -0.4px;
+        }
+
+        &-description {
+            color: #373737;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: -0.1px;
+            line-height: 1.75rem;
+        }
+    }
+}
+
+.Highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    padding-top: 3.75rem;
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+
+        &:nth-child(2n+1) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &-image {
+        border-radius: 0.4rem;
+    }
+
+    &-text_container {
+        padding: 0 7rem;
+
+        &-title {
+            color: #373737;
+            font-weight: 600;
+            line-height: 1.75rem;
+            font-size: 1.25rem;
+            padding-bottom: 0.875rem;
+        }
+
+        &-description {
+            color: #373737;
+            font-weight: 400;
+            letter-spacing: -0.1px;
+            font-size: 1rem;
+            line-height: 1.75rem;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .Ficha {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .Ficha {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .Ficha {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) {
+    .Ficha {
+        max-width: 1280px;
+    }
+}
+@media (min-width: 1536px) {
+    .Ficha {
+        max-width: 1536px;
+    }
+}
