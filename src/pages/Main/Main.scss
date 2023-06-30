@@ -1,0 +1,48 @@
+.Main {
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+
+    &-title {
+        color: #373737;
+        font-weight: 700;
+        font-size: 3.125rem;
+        line-height: 3.5rem;
+        letter-spacing: -1px;
+        padding: 5.5rem 0 4.5rem;
+    }
+
+    &-cars_list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-column-gap: 20px;
+        grid-row-gap: 2.75rem;
+        padding: 4.75rem 0 6.25rem 0;
+    }
+}
+
+@media (min-width: 640px) {
+    .Main {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .Main {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .Main {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) {
+    .Main {
+        max-width: 1280px;
+    }
+}
+@media (min-width: 1536px) {
+    .Main {
+        max-width: 1536px;
+    }
+}
