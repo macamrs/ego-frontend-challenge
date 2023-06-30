@@ -1,0 +1,83 @@
+.Filterandsort-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+    padding-bottom: 0.5rem;
+
+    &-filter_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.85rem;
+
+        &-subtitle {
+            color: #373737;
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 0.875rem;
+            letter-spacing: 0.005rem;
+        }
+
+        &-button {
+            all: unset;
+            background-color: #F7F7F7;
+            border-radius: 1.125rem;
+            font-size: 0.875rem;
+            font-family: 400;
+            line-height: 0.875rem;
+            letter-spacing: 0.005rem;
+            padding: 0.5rem 1.125rem;
+        }
+    }
+
+    &-sort_section {
+        &-dropdown_btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #373737;
+            font-size: 0.85rem;
+            font-weight: 600;
+            line-height: 0.85rem;
+            letter-spacing: 0.005rem;
+        }
+
+        &-options_list {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+
+            button {
+                all: unset;
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .Filterandsort-wrapper {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .Filterandsort-wrapper {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .Filterandsort-wrapper {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) {
+    .Filterandsort-wrapper {
+        max-width: 1280px;
+    }
+}
+@media (min-width: 1536px) {
+    .Filterandsort-wrapper {
+        max-width: 1536px;
+    }
+}

@@ -1,0 +1,19 @@
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+
+    &-car_image {
+        height: 14rem;
+        object-fit: contain;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        line-height: 1.875rem;
+        letter-spacing: -0.04rem;
+    }
+}
