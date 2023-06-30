@@ -25,7 +25,7 @@ export default async function sortFunction(payload, cars, listaOriginal) {
           else return 0;
         })
       : payload === "nada"
-      ? cars
+      ? listaOriginal
       : cars;
 
   return sortCars;

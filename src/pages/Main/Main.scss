@@ -13,10 +13,11 @@
     }
 
     &-cars_list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-column-gap: 20px;
-        grid-row-gap: 2.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        column-gap: 1.5rem;
+        row-gap: 2.75rem;
         padding: 4.75rem 0 6.25rem 0;
     }
 }
