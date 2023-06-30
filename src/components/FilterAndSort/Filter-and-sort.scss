@@ -6,6 +6,10 @@
     border-bottom: 1px solid rgba(204, 204, 204, 0.4);
     padding-bottom: 0.5rem;
 
+    &-responsive_filter_section {
+        display: none;
+    }
+
     &-filter_section {
         display: flex;
         justify-content: center;
@@ -56,6 +60,37 @@
             letter-spacing: 0.005rem;
         }
 
+        &-responsive_options_list {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            margin-top: 1rem;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 0.5rem;
+            box-shadow: 2px 8px 20px 0px rgba(0, 0, 0, 0.15);
+            right: left;
+            z-index: 10;
+            min-width: max-content;
+            padding: 0;
+
+            &-active_button {
+                all: unset;
+                padding: 1rem;
+                border-width: 0 0 1px 0;
+                border-color: #D8D8D8;
+                border-style: solid;
+                background-color: rgba(209, 214, 214, 0.2);
+            }
+
+            &-inactive_button {
+                all: unset;
+                padding: 1rem;
+                border-width: 0 0 1px 0;
+                border-color: #D8D8D8;
+                border-style: solid;
+            }
+        }
+
         &-options_list {
             display: flex;
             flex-direction: column;
@@ -67,6 +102,7 @@
             right: 0;
             z-index: 10;
             min-width: max-content;
+            padding: 0;
 
             &-active_button {
                 all: unset;
@@ -111,5 +147,15 @@
 @media (min-width: 1536px) {
     .Filterandsort-wrapper {
         max-width: 1536px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .Filterandsort-wrapper-responsive_filter_section {
+        display: block;
+    }
+
+    .Filterandsort-wrapper-filter_section {
+        display: none;
     }
 }

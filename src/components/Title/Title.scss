@@ -1,0 +1,14 @@
+.Title {
+    color: #373737;
+    font-weight: 700;
+    font-size: 3.125rem;
+    line-height: 3.5rem;
+    letter-spacing: -1px;
+    padding: 5.5rem 0 4.5rem;
+}
+
+@media screen and (max-width: 640px) {
+    .Title {
+        padding: 2.75rem 0 4.5rem;
+    }
+}

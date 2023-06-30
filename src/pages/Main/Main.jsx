@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { fetchAPIdata } from '../../utils/fetchAPIdata'
-import { Hero } from '../../components/FilterAndSort/Hero'
+import { FilterSort } from '../../components/FilterAndSort/FilterSort'
 import filterFunction from '../../utils/filterFunction'
 import sortFunction from '../../utils/sortFunction'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Main.scss'
 import CarsCard from '../../components/CarCards/CarsCard'
 import { BounceLoader } from 'react-spinners'
+import Title from '../../components/Title/Title'
 
 const Main = () => {
     const [cars , setCars] = useState([])
@@ -35,8 +36,8 @@ const Main = () => {
 
   return (
     <main className='Main'>
-      <h1 className='Main-title'>Descubrí todos los modelos</h1>
-      <Hero handleFilter={handleFilter} handleSort={handleSort} filterOrder={filterOrder} sortOrder={sortOrder} />
+      <Title texto={'Descubrí todos los modelos'} />
+      <FilterSort handleFilter={handleFilter} handleSort={handleSort} filterOrder={filterOrder} sortOrder={sortOrder} />
       <motion.section 
         layout
         transition={{ duration: 0.3}}

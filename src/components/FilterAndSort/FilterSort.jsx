@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import arrow from '../../assets/arrow.svg'
 import './Filter-and-sort.scss'
+import ResponsiveFilter from '../ResponsiveFilter/ResponsiveFilter';
 
-export const Hero = ({handleFilter, handleSort, filterOrder, sortOrder}) => {
+export const FilterSort = ({handleFilter, handleSort, filterOrder, sortOrder}) => {
   const [openDropdown, setOpenDropdown] = useState(false);
+  const [openFilterDropdown, setOpenFilterDropdown] = useState(false);
 
   return (
     <section>
@@ -24,6 +26,10 @@ export const Hero = ({handleFilter, handleSort, filterOrder, sortOrder}) => {
             </button>
           </div>
 
+          <div className='Filterandsort-wrapper-responsive_filter_section'>
+            <ResponsiveFilter setOpenFilterDropdown={setOpenFilterDropdown} openFilterDropdown={openFilterDropdown} filterOrder={filterOrder} handleFilter={handleFilter} />
+          </div>
+
         <div className='Filterandsort-wrapper-sort_section'>
           <div>
             <div className='Filterandsort-wrapper-sort_section-dropdown_btn' onClick={() => setOpenDropdown(!openDropdown)}>
@@ -33,15 +39,14 @@ export const Hero = ({handleFilter, handleSort, filterOrder, sortOrder}) => {
              
              {
               openDropdown &&
-              <li className='Filterandsort-wrapper-sort_section-options_list'>
-                <button className={`Filterandsort-wrapper-sort_section-options_list-${sortOrder === 'nada' ? 'active_button' : 'inactive_button' }`} value={"nada"} onClick={handleSort}>Nada</button>
-                <button className={`Filterandsort-wrapper-sort_section-options_list-${sortOrder === 'asc' ? 'active_button' : 'inactive_button' }`} value={"asc"} onClick={handleSort}>De menor a mayor precio</button>
-                <button className={`Filterandsort-wrapper-sort_section-options_list-${sortOrder === 'dsc' ? 'active_button' : 'inactive_button' }`} value={"dsc"} onClick={handleSort}>De mayor a menor precio</button>
-                <button className={`Filterandsort-wrapper-sort_section-options_list-${sortOrder === 'nuevos' ? 'active_button' : 'inactive_button' }`} value={"nuevos"} onClick={handleSort}>Más nuevos primero</button>
-                <button className={`Filterandsort-wrapper-sort_section-options_list-${sortOrder === 'viejos' ? 'active_button' : 'inactive_button' }`} value={"viejos"} onClick={handleSort}>Más viejos primero</button>
-              </li>                
+                <ul className='Filterandsort-wrapper-sort_section-options_list'>
+                  <button className={`Filterandsort-wrapper-sort_section-options_list-${sortOrder === 'nada' ? 'active_button' : 'inactive_button' }`} value={"nada"} onClick={handleSort}>Nada</button>
+                  <button className={`Filterandsort-wrapper-sort_section-options_list-${sortOrder === 'asc' ? 'active_button' : 'inactive_button' }`} value={"asc"} onClick={handleSort}>De menor a mayor precio</button>
+                  <button className={`Filterandsort-wrapper-sort_section-options_list-${sortOrder === 'dsc' ? 'active_button' : 'inactive_button' }`} value={"dsc"} onClick={handleSort}>De mayor a menor precio</button>
+                  <button className={`Filterandsort-wrapper-sort_section-options_list-${sortOrder === 'nuevos' ? 'active_button' : 'inactive_button' }`} value={"nuevos"} onClick={handleSort}>Más nuevos primero</button>
+                  <button className={`Filterandsort-wrapper-sort_section-options_list-${sortOrder === 'viejos' ? 'active_button' : 'inactive_button' }`} value={"viejos"} onClick={handleSort}>Más viejos primero</button>
+                </ul>                
              }
-          
           </div>       
         </div>
       </div>      
