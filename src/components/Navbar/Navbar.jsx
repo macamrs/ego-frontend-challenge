@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import logo from '../../assets/ego-logo.svg'
 import burgerMenuIcon from '../../assets/burger-menu.svg'
 import './Navbar.scss'
@@ -8,12 +8,13 @@ import MenuModal from '../MenuModal/MenuModal'
 const Navbar = () => {
   const [open , setOpen] = useState(false)
   const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <header className='Header'>
       <div className='Header-wrapper'>
         <div className='Header-navigation_container'>
-          <img src={logo} alt="EGO brand logo" />
+          <img className='Header-navigation_container-logo' src={logo} alt="Logo de EGO que redirige a la página Modelos" onClick={() => navigate('/')} />
           <nav className='Header-navigation_container-nav'>
               <NavLink to={'/'} className={({ isActive }) => isActive ? 'Header-navigation_container-nav-links' : 'Header-navigation_container-inactive_nav-links'}>Modelos</NavLink>
               {

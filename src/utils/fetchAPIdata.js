@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const BASE_URL = "https://challenge.egodesign.dev/api/models/";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export const fetchAPIdata = async () => {
   const { data } = await axios.get(`${BASE_URL}?format=json`);

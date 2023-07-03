@@ -6,8 +6,8 @@ import sortFunction from '../../utils/sortFunction'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Main.scss'
 import CarsCard from '../../components/CarCards/CarsCard'
-import { BounceLoader } from 'react-spinners'
 import Title from '../../components/Title/Title'
+import Loader from '../../components/Loader/Loader'
 
 const Main = () => {
     const [cars , setCars] = useState([])
@@ -44,8 +44,7 @@ const Main = () => {
         className='Main-cars_list'
       >
         <AnimatePresence>
-          {(cars.length === 0 || filtered === 0) ? 
-          <BounceLoader color="#373737" size={40} />
+          {(cars.length === 0 || filtered === 0) ? <Loader />
           : 
           filtered?.map((model) => {
               return (

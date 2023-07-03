@@ -1,26 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { fetchCarAPIdata } from '../../utils/fetchAPIdata';
-import { BounceLoader } from 'react-spinners'
 import './Ficha.scss'
 import Highlights from '../../components/Highlights/Highlights';
 import Feature from '../../components/Feature/Feature';
+import Loader from '../../components/Loader/Loader';
 
 const Ficha = () => {
     const { id } = useParams();
     const [ car , setCar ] = useState({})
 
     useEffect(() => {
-        fetchCarAPIdata(id).then((data) => {
-            setCar(data)
-        })
+        fetchCarAPIdata(id).then((data) => setCar(data))
     }, [])
 
-    if(!car.id) return (<div className='Loader'>
-    <BounceLoader color="#373737" size={40} /></div>)
+    if(!car.id) return <Loader />;
     
-
-
   return (
     <>
         <div key={car.id} className='Ficha'>

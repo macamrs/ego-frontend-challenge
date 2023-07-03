@@ -17,4 +17,12 @@
         line-height: 1.875rem;
         letter-spacing: -0.04rem;
     }
+
+    &:hover h2 {
+        color: #EB0A1E;
+    }
+
+    &-button {
+        height: 2rem;
+    }
 }
