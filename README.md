@@ -1,7 +1,8 @@
 # Aplicacion Web- EGO Frontend Assigment 🚀
 
 ````
-NOTA: Cree una rama adicional `after-updates`, esta rama tiene contenido de main como también un par de microinteracciones y animaciones usando Framer motion ✍🏼
+NOTA: Cree una rama adicional `after-updates`, esta rama tiene contenido de main como también
+un par de microinteracciones y animaciones usando Framer motion ✍🏼
 ````
 
 Esta aplicacion fue creado a partir de un diseño pre-determianado en Figma, utilizando React.js, React Router, SASS, entre otras tecnologias.
